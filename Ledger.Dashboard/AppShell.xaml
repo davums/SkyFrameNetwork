@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Ledger.Dashboard.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Ledger.Dashboard"
+    Title="Ledger Dashboard"
+    Shell.NavBarIsVisible="False"
+    Shell.BackgroundColor="#090A0C"
+    Shell.ForegroundColor="#F4F4F5"
+    Shell.TitleColor="#F4F4F5">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>
+
+

@@ -1,0 +1,29 @@
+# Build outputs & Visual Studio / VS Code cache
+bin/
+obj/
+.vs/
+.vscode/
+.nuget/
+**/.nuget/
+artifacts/
+**/artifacts/
+**/bin/
+**/obj/
+*.user
+*.suo
+
+# Runtime Blockchain Data, Logs & Private Wallet Keys (NEVER push to GitHub)
+data/
+Skyframe/data/
+test_node*/
+*.log
+*.db
+*.db-shm
+*.db-wal
+ledger.json
+node_identity.json
+peers.json
+Skyframe/data/
+**/data/
+*.jsonl
+*.sqlite*

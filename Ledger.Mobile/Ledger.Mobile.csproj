@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net9.0-android;net9.0-windows10.0.19041.0</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Ledger.Mobile</RootNamespace>
+    <UseMaui>true</UseMaui>
+    <WindowsPackageType>None</WindowsPackageType>
+    <SingleProject>true</SingleProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationTitle>Skyframe Wallet</ApplicationTitle>
+    <ApplicationId>com.skyframe.ledger.mobile</ApplicationId>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1</ApplicationVersion>
+    <!-- Make Debug APKs installable outside Visual Studio without __override__ Fast Deployment files. -->
+    <EmbedAssembliesIntoApk Condition="'$(TargetFramework)' == 'net9.0-android' and '$(Configuration)' == 'Debug'">true</EmbedAssembliesIntoApk>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
+    <CheckEolWorkloads>false</CheckEolWorkloads>
+  </PropertyGroup>
+  <ItemGroup>
+    <MauiIcon Include="Resources\AppIcon\appicon.svg" Color="#FFFFFF" />
+    <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#FFFFFF" BaseSize="512,553" />
+    <MauiImage Include="Resources\Images\*" />
+    <MauiAsset Include="..\seeds.json" LogicalName="seeds.json" />
+    <ProjectReference Include="..\Ledger.Core\Ledger.Core.csproj" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.111" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.8" />
+    <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ledger.Mobile.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Background">#090A0C</Color>
+            <Color x:Key="Surface">#151619</Color>
+            <Color x:Key="Accent">#FFFFFF</Color>
+            <Color x:Key="TextPrimary">#F4F4F5</Color>
+            <Color x:Key="TextMuted">#A1A1AA</Color>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
