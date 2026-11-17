@@ -1,10 +1,10 @@
 # Ledger.Mobile
 
-Ledger.Mobile targets .NET 8 MAUI on Android and Windows desktop (unpackaged); iOS is currently disabled. The Windows app is sized like a phone window (410 × 820). The recovery phrase is stored with SecureStorage.Default and is never included in an HTTP request. Transactions are signed in-process and only the signed transaction is broadcast.
+Ledger.Mobile targets .NET 9 MAUI on Android and Windows desktop (unpackaged); iOS is currently disabled. The Windows app is sized like a phone window (410 × 820). The recovery phrase is stored with SecureStorage.Default and is never included in an HTTP request. Transactions are signed in-process and only the signed transaction is broadcast.
 
 ## Android development
 
-Install Android SDK Platform 34 and Android SDK Command-line Tools (latest) using Android Studio's SDK Manager. Set `ANDROID_HOME` to the SDK directory or pass `-p:AndroidSdkDirectory` when building. In PowerShell, build with `dotnet build Ledger.Mobile/Ledger.Mobile.csproj -f net8.0-android -p:AndroidSdkDirectory="$env:ANDROID_HOME"`.
+Install Android SDK Platform 35 and Android SDK Command-line Tools (latest) using Android Studio's SDK Manager. Set `ANDROID_HOME` to the SDK directory or pass `-p:AndroidSdkDirectory` when building. In PowerShell, build with `dotnet build Ledger.Mobile/Ledger.Mobile.csproj -f net9.0-android -p:AndroidSdkDirectory="$env:ANDROID_HOME"`.
 
 ## Node gateways
 
@@ -19,3 +19,4 @@ Payment QR codes use `skyframe:{address}?amount={amount}&reference={SKYF-XXXXXX}
 Skyframe uses its own `SKYF` network magic, `skyf1` address prefix, and genesis identity. Escrow EFT references use `SKYF-XXXXXX`. Existing Kora chain data is preserved in the old `data` directory; the new node defaults to `Skyframe/data` (or `%LOCALAPPDATA%/Skyframe/data` when run outside the solution). The Android application ID is `com.skyframe.ledger.mobile`; Android treats it as a new app identity, so import the existing recovery phrase to restore the wallet.
 
 For local Windows development, enter `http://127.0.0.1:6001` in Settings to use the node's loopback API in single-node mode. This mode is for local testing. For public operation, configure independent HTTPS gateways; the app scales the required matching responses from one to five as gateways are added.
+
