@@ -1,5 +1,5 @@
 {
   "network": "skyframe-mainnet",
-  "p2pSeeds": ["127.0.0.1:5001"],
-  "mobileGateways": ["http://127.0.0.1:6001"]
+  "p2pSeeds": ["192.168.88.131:5001"],
+  "mobileGateways": ["http://192.168.88.131:6001"]
 }
